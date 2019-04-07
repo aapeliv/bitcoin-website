@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Bitcoin block propagation delay dataset</title>
+
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/container.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/header.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/image.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/menu.css">
+
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/dropdown.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/button.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/list.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/icon.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/components/transition.css">
+
+  <link rel="stylesheet" type="text/css" href="assets/btc.css">
+
+  <script src="assets/jquery-3.3.1.min.js"></script>
+  <script src="semantic/dist/components/visibility.js"></script>
+  <script src="semantic/dist/components/sidebar.js"></script>
+  <script src="semantic/dist/components/transition.js"></script>
+
+  <link rel="stylesheet" href="https://use.typekit.net/cvu4wmy.css">
+  <script>
+  $(document)
+    .ready(function() {
+
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+  </script>
+</head>
+<body>
+
+<!-- Page Contents -->
+<div class="pusher">
+  <div class="ui inverted vertical masthead center aligned segment">
+
+    <div class="ui text container">
+      <div class="masthead_content">
+        <h1 class="ui inverted header ac">Bitcoin block times</h1>
+        <h2 class="ui inverted header byline">Open dataset containing block propagation times from the Bitcoin network from late 2018 until early 2019.</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="fourteen wide column">
+          <h3 class="ui header">About this project</h3>
+          <p>This open dataset contains the block propagation times of TODO blocks on the Bitcoin network between TODO and TODO. The data was collected from 9 locations (AWS EC2 instances), each connected to approximately 700 nodes at a time. Each of these locations ran Python custom code, to be cleaned up and open sourced soon.</p>
+          <p>This site is very much a work in progress. I will upload the data, along with some interactive visualisations and source code for everything in the coming months.</p>
+          <p>This is part of my masters thesis at the <a href="https://unimelb.edu.au/">University of Melbourne</a>, supervised by <a href="https://acems.org.au/our-people/peter-taylor">Prof. Peter Taylor</a>.</p>
+          <p>If you're interested in this project, or would like any of the materials before I have a chance to polish off this website, please don't hesitate to email me at <a href="mailto:btc-page@aapelivuorinen.com">btc-page@aapelivuorinen.com</a>.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="center aligned column">
+          <a class="ui huge button" href="/explore">Explore the data</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="seven wide column">
+          <h4 class="ui inverted header">&copy; 2019 <a href="https://www.aapelivuorinen.com">Aapeli Vuorinen</a></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
